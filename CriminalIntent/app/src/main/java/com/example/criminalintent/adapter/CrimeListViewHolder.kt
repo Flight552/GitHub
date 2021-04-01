@@ -27,7 +27,7 @@ class CrimeListViewHolder(view: View) : CrimeDelegate(view){
         Toast.makeText(
             v?.context,
             "${nameView.text}" +
-                    "No need for police",
+                    " No need for police",
             Toast.LENGTH_LONG
         ).show()
     }
