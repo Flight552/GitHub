@@ -10,7 +10,7 @@ class CrimeListViewModel: ViewModel() {
         for (i in 0 until 100) {
             val crime = Crime()
             crime.crimeName = "Crime #$i"
-            crime.crimeStatus = i % 2 == 0
+            crime.crimeStatus = i % 3 == 0
             crime.requiresPolice = i % 2 == 0
             crimes += crime
         }
