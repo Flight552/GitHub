@@ -6,4 +6,5 @@
     <string name="crime_solved_label">Solved</string>
     <string name="CrimeIsSolved">isSolved</string>
     <string name="CallPolice">callPolice</string>
+    <string name="cb_involve_police">Involve Police</string>
 </resources>

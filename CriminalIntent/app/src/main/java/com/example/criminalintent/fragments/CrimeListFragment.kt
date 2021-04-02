@@ -9,12 +9,16 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.criminalintent.R
 import com.example.criminalintent.adapter.CrimeListAdapter
+import com.example.criminalintent.data.Crime
 import com.example.criminalintent.viewmodel.CrimeListViewModel
 import com.example.criminalintent.databinding.FragmentCrimeListBinding
+import kotlinx.coroutines.launch
 import java.util.zip.Inflater
 
 
@@ -29,12 +33,7 @@ class CrimeListFragment : Fragment(R.layout.fragment_crime_list) {
 
     private val crimeListViewModel: CrimeListViewModel by viewModels()
     private lateinit var crimeListRecycleView: RecyclerView
-    private var adapter: CrimeListAdapter? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Log.d(TAG, "${crimeListViewModel.crimes.size}")
-    }
+    private var adapter: CrimeListAdapter? = CrimeListAdapter(emptyList())
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,12 +43,23 @@ class CrimeListFragment : Fragment(R.layout.fragment_crime_list) {
         _binding = FragmentCrimeListBinding.inflate(inflater, container, false)
         crimeListRecycleView = binding.rvCrimeList
         recycleViewInit()
-        setAdapter()
+        getListFromViewModel()
         return binding.root
     }
 
-    private fun setAdapter() {
-        val crimes = crimeListViewModel.crimes
+    private fun getListFromViewModel() {
+        crimeListViewModel.listCrimesLiveData.observe(
+            viewLifecycleOwner,
+            { crimes ->
+                crimes?.let {
+                    Log.d("CrimeListFragment", "${crimes.size}")
+                    setAdapter(crimes)
+                }
+            }
+        )
+    }
+
+    private fun setAdapter(crimes: List<Crime>) {
         adapter = CrimeListAdapter(crimes)
         crimeListRecycleView.adapter = adapter
     }
