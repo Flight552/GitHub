@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheatActivity">
+
+    <TextView
+        android:id="@+id/tvWarningText"
+        android:text="@string/tv_warning_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Answer"
+        android:padding="24dp"
+        />
+
+    <Button
+        android:id="@+id/btShowAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_show_answer"
+        />
+
+    <TextView
+        android:id="@+id/tvAPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Api Level"
+        android:layout_margin="24dp"
+        />
+
+</LinearLayout>
