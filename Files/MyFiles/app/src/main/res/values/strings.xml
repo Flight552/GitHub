@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyFiles</string>
+    <string name="et_enter_url">Enter URL</string>
+    <string name="bt_get_file">Get File</string>
+</resources>

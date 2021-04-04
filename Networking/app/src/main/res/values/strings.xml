@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="et_enter_movie_title">Enter movie title</string>
+    <string name="et_enter_movie_release_date">Enter movie release date</string>
+    <string name="movie_menu_search_items">Search Items</string>
+    <string name="auto_complete_choose_your_type">Choose your type</string>
+    <string name="bt_search">Search</string>
+    <string name="common_error">Common Error</string>
+    <string name="bt_try_again">Try again</string>
+    <string name="tv_connection_error">Connection error</string>
+</resources>

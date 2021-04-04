@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Module 8_2</string>
+    <string name="tv_main">New World</string>
+    <string name="et_enter_your_name">Enter Your Name</string>
+    <string name="et_hello">Hello, %1$s</string>
+    <string name="bt_button">Clear me</string>
+    <string name="res_textIsClear">Text is Clear</string>
+    <string name="bt_enable_long_process">Enable long process</string>
+    <string name="bt_addButton">Add</string>
+    <string name="bt_remove">Remove</string>
+</resources>

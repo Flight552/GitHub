@@ -1,0 +1,18 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/teal_200</item>
+        <item name="colorPrimaryDark">@color/design_default_color_primary</item>
+        <item name="colorAccent">@color/design_default_color_surface</item>
+    </style>
+
+    <style name="AppBarStyle" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="iconTint">@android:color/white</item>
+        <item name="toolbarNavigationButtonStyle">@style/Toolbar.Button.Navigation.Tinted</item>
+    </style>
+
+    <style name="Toolbar.Button.Navigation.Tinted" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="tint">@android:color/white</item>
+    </style>
+
+</resources>

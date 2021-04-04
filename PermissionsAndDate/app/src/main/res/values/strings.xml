@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DateTime</string>
+    <string name="text_permission_granted">Permission Granted</string>
+    <string name="text_permission_denied">Permission Denied. Ask for permission</string>
+    <string name="bt_text_allow_location">Запросить доступ</string>
+    <string name="bt_requestLocation_text">Запросить локацию</string>
+    <string name="iv_location_user_avatar">Location User Avatar</string>
+    <string name="tv_data_is_not_available">Data is not available</string>
+</resources>

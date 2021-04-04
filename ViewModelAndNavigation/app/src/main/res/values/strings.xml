@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Lists</string>
+    <string name="image_beer">image_beer</string>
+    <string name="beer_name">Beer:</string>
+    <string name="beer_type">Type:</string>
+    <string name="beer_country">ID:</string>
+    <string name="fragment_beer_stack">addBeerStack</string>
+    <string name="et_enter_your_beer_name">Enter Your Beer</string>
+    <string name="tv_brand_beer_fragment">Brand</string>
+    <string name="tv_type_beer_fragment">Type</string>
+    <string name="tv_country_beer_fragment">Country</string>
+    <string name="et_enter_beer_origin">Enter beer origin</string>
+    <string name="bt_add">ADD</string>
+    <string name="bt_list">List Beer</string>
+    <string name="bt_grid">Grid Beer</string>
+    <string name="bt_staggered">Staggered Beer</string>
+    <string-array name="spinner_beer">
+        <item>LAGER</item>
+        <item>PORTER</item>
+        <item>DUNKEL</item>
+        <item>STOUT</item>
+        <item>CIDER</item>
+    </string-array>
+</resources>

@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">MyToolbar</string>
+    <string name="search_me">search_me</string>
+    <string name="toast_arrow">Let\'s go back</string>
+    <string name="tv_theSongBook">The SongBook</string>
+    <string name="item_song1">Smells Like</string>
+    <string name="item_song2">The Unforgiven</string>
+    <string name="item_song3">song3</string>
+
+    <string name="tv_song1">
+        Load up on guns, bring your friends\n
+It\'s fun to lose and to pretend\n
+She\'s over-bored and self-assured\n
+Oh no, I know a dirty word\n
+Hello, hello, hello, how low\n
+Hello, hello, hello, how low\n
+Hello, hello, hello, how low\n
+Hello, hello, hello\n
+With the lights out, it\'s less dangerous\n
+Here we are now, entertain us\n
+I feel stupid and contagious\n
+Here we are now, entertain us\n
+A mulatto, an albino, a mosquito, my libido\n
+Yeah, hey\n
+I\'m worse at what I do best\n
+And for this gift I feel blessed\n
+Our little group has always been\n
+And always will until the end\n
+Hello, hello, hello, how low\n
+Hello, hello, hello, how low\n
+Hello, hello, hello, how low\n
+Hello, hello, hello\n
+With the lights out, it\'s less dangerous\n
+Here we are now, entertain us\n
+I feel stupid and contagious\n
+Here we are now, entertain us\n
+A mulatto, an albino, a mosquito, my libido\n
+And I forget just why I taste\n
+Oh yeah, I guess it makes me smile\n
+I found it hard, it\'s hard to find\n
+Oh well, whatever, never mind\nHello, hello, hello, how low\n
+Hello, hello, hello, how low\n
+Hello, hello, hello, how low\n
+Hello, hello, hello\nWith the lights out, it\'s less dangerous\n
+Here we are now, entertain us\n
+I feel stupid and contagious\n
+Here we are now, entertain us\n
+A mulatto, an albino, a mosquito, my libido\n
+    </string>
+
+    <string name="tv_song2">
+        New blood joins this earth\n
+And quickly he\'s subdued\n
+Through constant pain disgrace\n
+The young boy learns their rules\n
+With time the child draws in\n
+This whipping boy done wrong\n
+Deprived of all his thoughts\n
+The young man struggles on and on he\'s known\n
+A vow unto his own\n
+That never from this day\n
+His will they\'ll take away\n
+What I\'ve felt\n
+What I\'ve known\n
+Never shined through in what I\'ve shown\n
+Never be\n
+Never see\n
+Won\'t see what might have been\n
+What I\'ve felt\n
+What I\'ve known\n
+Never shined through in what I\'ve shown\n
+Never free\n
+Never me\n
+So I dub thee unforgiven\n
+They dedicate their lives\n
+To running all of his\n
+He tries to please them all\n
+This bitter man he is\n
+Throughout his life the same\n
+He\'s battled constantly\n
+This fight he cannot win\n
+A tired man they see no longer cares\n
+The old man then prepares\n
+To die regretfully\n
+That old man here is me\n
+What I\'ve felt\n
+What I\'ve known\n
+Never shined through in what I\'ve shown\n
+Never be\n
+Never see\n
+Won\'t see what might have been\n
+What I\'ve felt\n
+What I\'ve known\n
+Never shined through in what I\'ve shown\n
+Never free\n
+Never me\n
+So I dub thee unforgiven\n
+What I\'ve felt\n
+What I\'ve known\n
+Never shined through in what I\'ve shown\n
+Never be\n
+Never see\n
+Won\'t see what might have been\n
+What I\'ve felt\n
+What I\'ve known\n
+Never shined through in what I\'ve shown\n
+Never free\n
+Never me\n
+So I dub thee unforgiven\n
+Never free\n
+Never me\n
+So I dub thee unforgiven\n
+You labeled me\n
+I labeled you\n
+So I dub thee unforgiven\n
+Never free\n
+Never me\n
+So I dub thee unforgiven\n
+You labeled me\n
+I labeled you\n
+So I dub thee unforgiven\n
+Never free\n
+Never me\n
+So I dub thee unforgiven\n
+    </string>
+    <string name="bt_error">Error</string>
+
+</resources>

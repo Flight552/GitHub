@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactListFragment">
+    <fragment
+        android:id="@+id/contactListFragment"
+        android:name="com.example.contentapp.contactList.ContactListFragment"
+        android:label="ContactListFragment"
+        tools:layout="@layout/fragment_contacts_list"
+        >
+        <action
+            android:id="@+id/action_contactListFragment_to_contactDetailedFragment"
+            app:destination="@id/contactDetailedFragment" />
+        <action
+            android:id="@+id/action_contactListFragment_to_contactSaveInfoFragment"
+            app:destination="@id/contactSaveInfoFragment" />
+        <action
+            android:id="@+id/action_contactListFragment_to_fragmentActivity"
+            app:destination="@id/fragmentActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactDetailedFragment"
+        android:name="com.example.contentapp.contactDetailed.ContactDetailedFragment"
+        android:label="ContactDetailedFragment"
+        tools:layout="@layout/contact_detailed_info">
+        <argument
+            android:name="position"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactSaveInfoFragment"
+        android:name="com.example.contentapp.contactSave.ContactSaveInfoFragment"
+        android:label="ContactSaveInfoFragment"
+        tools:layout="@layout/contact_add_layout"
+        />
+    <fragment
+        android:id="@+id/fragmentActivity"
+        android:name="com.example.contentapp.downloadFile.FragmentActivity"
+        android:label="FragmentActivity"
+        tools:layout="@layout/fragment_download_file_layout"
+        />
+</navigation>

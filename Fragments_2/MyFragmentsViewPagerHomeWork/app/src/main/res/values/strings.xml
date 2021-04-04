@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyFragmentsViewPagerHomeWork</string>
+    <string name="black_sabbath_icon">Black Sabbath Albums</string>
+    <string name="europe_icon">Europe Albums</string>
+    <string name="metallica_icon">Metallica Albums</string>
+    <string name="pinkfloyd_icon">PinkFloyd Albums</string>
+    <string name="tv_welcome_to">Welcome to Rock-n-Roll Hall of Fame</string>
+    <string name="bt_generateBadge">generator</string>
+    <string name="menu_ClassicalRock">Rock Me</string>
+    <string name="genre_classical">ClassicalRock</string>
+    <string name="genre_metal">Metal</string>
+    <string name="genre_trashMetal">TrashMetal</string>
+
+
+</resources>

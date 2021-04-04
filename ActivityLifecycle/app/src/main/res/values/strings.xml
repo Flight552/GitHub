@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="et_enter_id">Enter Email ID</string>
+    <string name="et_enter_password">Enter Password</string>
+    <string name="bt_enter">Enter</string>
+    <string name="tv_greetings">Hello, User!</string>
+    <string name="welcome_image">Welcome Image</string>
+    <string name="toast_LoginSuccessful">Login successful</string>
+    <string name="toast_notValidEmail">Email is not valid</string>
+    <string name="text_terms_agreement">I agree to local terms</string>
+    <string name="text_userInfo">Login fields should not be empty</string>
+    <string name="text_userAgreement">The agreement must be accepted</string>
+    <string name="bt_error">Error</string>
+    <string name="Login_Success">Login successful</string>
+</resources>

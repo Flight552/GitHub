@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/et_hello"
+        android:scaleType="centerCrop" />
+
+    <EditText
+        android:id="@+id/et_EnterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:hint="@string/et_enter_your_name" />
+
+    <TextView
+        android:id="@+id/tv_MainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/bt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:text="@string/bt_button" />
+
+    <Button
+        android:id="@+id/bt_MakeOperation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/bt_enable_long_process" />
+
+    <ProgressBar
+        android:id="@+id/pb_LongOperation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

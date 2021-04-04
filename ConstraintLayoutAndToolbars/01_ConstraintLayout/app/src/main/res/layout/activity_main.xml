@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_Image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/welcome_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/gl_End"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="@+id/gl_Start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mainText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_greetings"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_End"
+        app:layout_constraintStart_toStartOf="@+id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/gl_Top" />
+
+    <EditText
+        android:id="@+id/et_UserID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/et_enter_id"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/et_UserPassword"
+        app:layout_constraintEnd_toStartOf="@+id/gl_End"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mainText"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/et_UserPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/et_enter_password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/bt_EnterMain"
+        app:layout_constraintEnd_toStartOf="@+id/gl_End"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/et_UserID" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/text_terms_agreement"
+        app:layout_constraintEnd_toStartOf="@+id/cb_agreement"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/et_UserPassword" />
+
+    <CheckBox
+        android:id="@+id/cb_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:checked="false"
+        android:enabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/bt_EnterMain"
+        app:layout_constraintEnd_toStartOf="@+id/gl_End"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/bt_EnterMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:enabled="false"
+        android:text="@string/bt_enter"
+        app:layout_constraintEnd_toStartOf="@+id/gl_End"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@id/cb_agreement"
+        tools:layout_editor_absoluteY="589dp" />
+
+    <ProgressBar
+        android:id="@+id/pb_Progress"
+        android:layout_width="73dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        android:progress="30"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/gl_End"
+        app:layout_constraintStart_toStartOf="@+id/gl_Start"
+        app:layout_constraintTop_toBottomOf="@+id/bt_EnterMain" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="21dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_Top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="200dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="250dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
