@@ -1,10 +1,7 @@
 package com.example.criminalintent.data
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.criminalintent.database.CrimeContracts
 import java.util.*
 
@@ -18,4 +15,10 @@ interface CrimeDao {
 
     @Query("SELECT * FROM ${CrimeContracts.TABLE_NAME} WHERE ${CrimeContracts.Columns.CRIME_PRIMARY_KEY} = (:id)")
     fun getCrimeById(id: UUID): LiveData<Crime?>
+
+    @Update
+    fun updateCrime(crime: Crime)
+
+    @Insert
+    fun addCrime(crime: Crime)
 }

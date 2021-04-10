@@ -9,6 +9,9 @@ import com.example.criminalintent.database.CrimeDatabase
 import com.example.criminalintent.database.MIGRATION_1_2
 import java.lang.IllegalStateException
 import java.util.*
+import java.util.concurrent.Executor
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 class CrimeRepository private constructor(context: Context) {
 
@@ -20,9 +23,22 @@ class CrimeRepository private constructor(context: Context) {
         .build()
 
     private val crimeDao: CrimeDao = database.crimeDao()
+    private val executor: ExecutorService = Executors.newSingleThreadExecutor()
 
     fun getCrimes(): LiveData<List<Crime>> = crimeDao.getCrimesList()
     fun getCrimeById(uuid: UUID): LiveData<Crime?> = crimeDao.getCrimeById(uuid)
+
+    fun updateCrime(crime: Crime) {
+        executor.execute {
+            crimeDao.updateCrime(crime)
+        }
+    }
+
+    fun addCrime(crime: Crime) {
+        executor.execute {
+            crimeDao.addCrime(crime)
+        }
+    }
 
     companion object {
         private var INSTANCE: CrimeRepository? = null
