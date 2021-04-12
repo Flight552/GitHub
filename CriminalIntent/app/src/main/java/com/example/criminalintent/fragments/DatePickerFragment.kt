@@ -40,7 +40,6 @@ class DatePickerFragment : DialogFragment() {
 
     companion object {
         const val REQUEST_KEY = "request_key"
-
         fun newInstance(date: Date): DatePickerFragment {
             val args = Bundle().apply {
                 putSerializable(ARG_DATE, date)

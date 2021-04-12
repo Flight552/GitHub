@@ -1,5 +1,6 @@
 package com.example.criminalintent.fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -20,6 +21,7 @@ import java.util.*
 
 private const val ARG_CRIME_ID = "crime_id"
 private const val DIALOG_DATE = "DialogDate"
+private const val DIALOG_TIME = "DialogTime"
 
 class CrimeFragment : Fragment(R.layout.crime_fragment) {
 
@@ -49,6 +51,7 @@ class CrimeFragment : Fragment(R.layout.crime_fragment) {
         super.onStart()
         onSetCheckBox()
         startDateDialog()
+        startTimeDialog()
     }
 
     override fun onStop() {
@@ -85,6 +88,27 @@ class CrimeFragment : Fragment(R.layout.crime_fragment) {
         }
     }
 
+    private fun startTimeDialog() {
+        binding.btSetTimeDetails.setOnClickListener {
+            TimePickerFragment.newInstance(crimeUpdate.crimeDate).apply {
+                this@CrimeFragment.setFragmentResultListener(
+                    TimePickerFragment.TIME_RESULT_HOUR
+                 ) {
+                    requestKey: String, bundle: Bundle ->
+                    val listOfTime = bundle.getIntegerArrayList(requestKey)
+                    Log.d("startTimeDialog", "${listOfTime?.size}")
+                    if (listOfTime != null) {
+                        (0..listOfTime.size).forEach {
+                            Log.d("startTimeDialog", "$it")
+                        }
+                    }
+                    onTimeSelected(listOfTime)
+                }
+                show(this@CrimeFragment.parentFragmentManager, DIALOG_TIME)
+            }
+        }
+    }
+
     private fun getCrimeFromViewModel() {
         viewModel.crimeLiveData.observe(
             viewLifecycleOwner, { crime ->
@@ -115,7 +139,15 @@ class CrimeFragment : Fragment(R.layout.crime_fragment) {
         binding.btCrimeDetails.apply {
             text = SimpleDateFormat("EEEE, MMM d, yyyy", local).format(crimeUpdate.crimeDate)
         }
+
+        binding.btSetTimeDetails.apply {
+            val calendar = Calendar.getInstance()
+            calendar.time = crimeUpdate.crimeDate
+            text = "${calendar.get(Calendar.HOUR)} : ${calendar.get(Calendar.HOUR)}"
+        }
     }
+
+
 
     private fun onSetCheckBox() {
         val titleWatcher = object : TextWatcher {
@@ -167,5 +199,12 @@ class CrimeFragment : Fragment(R.layout.crime_fragment) {
     private fun onDateSelected(date: Date) {
         crimeUpdate.crimeDate = date
         updateCrime()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun onTimeSelected(list: ArrayList<Int>?) {
+        if(list != null) {
+            binding.btSetTimeDetails.text = "${list[0]} : ${list[1]}"
+        }
     }
 }
