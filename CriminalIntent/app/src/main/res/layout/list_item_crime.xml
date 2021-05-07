@@ -15,18 +15,8 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="italic"
-        app:layout_constraintEnd_toStartOf="@id/ibPolice"
+        app:layout_constraintEnd_toStartOf="@id/ibIsSolved"
         />
-    <ImageButton
-        android:id="@+id/ibPolice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_local_police_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvCrimeName"
-        app:layout_constraintBottom_toBottomOf="@id/tvCrimeDate"
-        android:visibility="gone"
-        android:contentDescription="@string/CallPolice" />
 
     <ImageButton
         android:id="@+id/ibIsSolved"
@@ -45,7 +35,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvCrimeName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ibPolice"
+        app:layout_constraintEnd_toStartOf="@id/ibIsSolved"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

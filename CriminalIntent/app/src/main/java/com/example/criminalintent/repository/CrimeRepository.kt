@@ -7,6 +7,7 @@ import com.example.criminalintent.data.Crime
 import com.example.criminalintent.data.CrimeDao
 import com.example.criminalintent.database.CrimeDatabase
 import com.example.criminalintent.database.MIGRATION_1_2
+import com.example.criminalintent.database.MIGRATION_2_3
 import java.lang.IllegalStateException
 import java.util.*
 import java.util.concurrent.Executor
@@ -19,7 +20,7 @@ class CrimeRepository private constructor(context: Context) {
         context.applicationContext,
         CrimeDatabase::class.java,
         CrimeDatabase.DATABASE_NAME
-    ).addMigrations(MIGRATION_1_2)
+    )//.addMigrations(MIGRATION_2_3)
         .build()
 
     private val crimeDao: CrimeDao = database.crimeDao()

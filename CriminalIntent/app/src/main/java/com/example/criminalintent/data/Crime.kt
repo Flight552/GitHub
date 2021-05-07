@@ -17,6 +17,7 @@ data class Crime(
     var crimeDate: Date = Date(),
     @ColumnInfo(name = CrimeContracts.Columns.CRIME_IS_SOLVED)
     var crimeStatus: Boolean = false,
-    @ColumnInfo(name = CrimeContracts.Columns.CRIME_INVOLVE_POLICE)
-    var requiresPolice: Boolean = false
+    @ColumnInfo(name = CrimeContracts.Columns.CRIME_SUSPECT)
+    var crimeSuspect: String = ""
+
 )

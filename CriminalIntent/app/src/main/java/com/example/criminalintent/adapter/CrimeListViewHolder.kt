@@ -12,7 +12,6 @@ class CrimeListViewHolder(view: View, private val onItemClick: (Int) -> Unit) : 
     private val nameView: TextView = itemView.findViewById(R.id.tvCrimeName)
     private val dateView: TextView = itemView.findViewById(R.id.tvCrimeDate)
     private val isSolved: ImageButton = itemView.findViewById(R.id.ibIsSolved)
-    private var policeStatus: ImageButton = itemView.findViewById(R.id.ibPolice)
 
     init {
         itemView.setOnClickListener {
@@ -28,13 +27,6 @@ class CrimeListViewHolder(view: View, private val onItemClick: (Int) -> Unit) : 
             View.VISIBLE
         } else {
             View.GONE
-        }
-        if(!crime.crimeStatus) {
-            policeStatus.visibility = if (crime.requiresPolice) {
-                View.VISIBLE
-            } else {
-                View.GONE
-            }
         }
     }
 

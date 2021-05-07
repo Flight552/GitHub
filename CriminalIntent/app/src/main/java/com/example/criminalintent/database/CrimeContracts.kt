@@ -8,6 +8,6 @@ object CrimeContracts {
         const val CRIME_TITLE = "title"
         const val CRIME_DATE = "date"
         const val CRIME_IS_SOLVED = "isSolved"
-        const val CRIME_INVOLVE_POLICE = "police"
+        const val CRIME_SUSPECT = "suspect"
     }
 }

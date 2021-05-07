@@ -41,29 +41,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         />
-    <CheckBox
-        android:id="@+id/cbCallPolice"
-        android:text="@string/cb_involve_police"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        />
     <Button
         android:id="@+id/btCrimeDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="@string/crime_details_label"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        />
-    <Button
-        android:id="@+id/btSetTimeDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="SET TIME"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -79,6 +61,18 @@
         android:layout_marginEnd="10dp"
         />
 
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btCrimeSuspect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_choose_suspect"
+        />
 
-
+    <Button
+        android:id="@+id/btCrimeReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_send_crime_report"
+        />
 </androidx.appcompat.widget.LinearLayoutCompat>

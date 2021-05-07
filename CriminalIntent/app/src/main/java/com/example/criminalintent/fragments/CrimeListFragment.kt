@@ -1,13 +1,13 @@
 package com.example.criminalintent.fragments
 
 import android.content.Context
+import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -42,6 +42,7 @@ class CrimeListFragment : Fragment(R.layout.fragment_crime_list) {
 
     private var callbacks: Callbacks? = null
 
+    //-----------------------------------------------------------------------
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,7 +52,17 @@ class CrimeListFragment : Fragment(R.layout.fragment_crime_list) {
         crimeListRecycleView = binding.rvCrimeList
         getListFromViewModel()
         recycleViewInit()
+
+        binding.floatingAddCrime.setOnClickListener{
+            addNewCrime()
+        }
+
         return binding.root
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     override fun onAttach(context: Context) {
@@ -64,6 +75,27 @@ class CrimeListFragment : Fragment(R.layout.fragment_crime_list) {
         callbacks = null
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.fragment_crime_list, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_new_crime -> {
+                addNewCrime()
+                true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+    //----------------------------------------------------------------------
+
+    private fun addNewCrime() {
+        val crime = Crime()
+        crimeListViewModel.saveCrime(crime)
+        callbacks?.onCrimeSelected(crime.crimeId)
+    }
 
     private fun getListFromViewModel() {
         crimeListViewModel.listCrimesLiveData.observe(
@@ -71,6 +103,14 @@ class CrimeListFragment : Fragment(R.layout.fragment_crime_list) {
             { crimes ->
                 crimes?.let {
                     Log.d("CrimeListFragment", "${crimes.size}")
+                    if (crimes.isEmpty()) {
+                        binding.floatingAddCrime.visibility = View.VISIBLE
+                        binding.tvEmptyList.visibility = View.VISIBLE
+                        binding.tvEmptyList.text = "List is empty. Add new crime"
+                    } else {
+                        binding.floatingAddCrime.visibility = View.INVISIBLE
+                        binding.tvEmptyList.visibility = View.INVISIBLE
+                    }
                     setAdapter(crimes)
                 }
             }

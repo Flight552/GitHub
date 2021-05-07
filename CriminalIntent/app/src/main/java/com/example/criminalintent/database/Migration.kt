@@ -12,3 +12,13 @@ val MIGRATION_1_2 = object : Migration(
     }
 
 }
+val MIGRATION_2_3 = object : Migration(
+    2,
+    3
+) {
+    override fun migrate(database: SupportSQLiteDatabase) {
+        database.execSQL("ALTER TABLE Crime ADD COLUMN suspect TEXT NOT NULL DEFAULT 0")
+    }
+
+}
+
