@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Scoped</string>
+    <string name="bt_show_all_movies">SHOW ALL MOVIES</string>
+    <string name="bt_add_movie">ADD MOVIE</string>
+    <string name="video_list_error">Unable to load videos</string>
+    <string name="video_find_error">Video not found on server</string>
+    <string name="et_enter_movie_id">Enter movie id:</string>
+    <string name="et_save_movie_title">Save movie title:</string>
+    <string name="bt_save_me">Save Me</string>
+</resources>
